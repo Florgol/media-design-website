@@ -1,0 +1,221 @@
+/* Author: Florian Goldbach */ 
+/* Datum: 14.06.2023 */
+
+/* Die Default-Einstellungen sind für das Layout Fullscreen - Media Queries für andere Layouts am Ende! */
+
+/* Allgemeine Einstellungen - Schriftart, Schriftgöße, Spacing, Position */
+
+body {
+    color: #333; 
+}
+
+h1, h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #222;
+    text-align: center;
+}
+
+h1 {
+    font-size: 5em;
+}
+
+h2 {
+    font-size: 3em;
+    margin-top: 15%;
+}
+
+p {
+    padding: 0 50px;
+}
+
+/* Links schöner darstellen */
+a {
+    text-decoration: none;
+    color: #007BFF;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+  
+/* Autor */
+
+#author {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 60px;
+}
+
+/* Kleine Überschriften - bei ESA4 benutzt */
+
+.small-description {
+    font-size: 0.8em;
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+/* Bilder schöner darstellen, positionieren */
+
+img {
+    display: block;
+    height: auto;
+    margin: auto;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+}
+
+#esa1 img, #esa2 img, #esa3 img {
+    margin-top: 3%;
+    max-width: 80%;
+
+}
+
+.design-images img, .mockup-images img {
+    max-width: 80%;
+
+}
+
+/* Logoanimation positionieren */
+
+.video {
+    width: 80%; 
+    height: auto; 
+    display: block; 
+    margin:auto;
+}
+
+/* Beschreibungen positionieren, schöner und "interaktiv" machen */
+
+.centered-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+}
+  
+details[open] {
+    width: 77%;
+    justify-content: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+}
+  
+/* Rückseite CD und Schallplatte nebeneinander anzeigen - ESA4 */
+
+.image-row {
+    display: flex;
+}
+
+.image-row img {
+    max-width: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+ /* Inhaltsverzeichnis positionieren */
+
+.contents {
+    margin-bottom: 25%;
+}
+
+.contents h2 {
+    margin-top: 10%;
+}
+
+.contents h2, li {
+    text-align: left;
+    margin-left: 42%;
+}
+
+/* Inhaltsverzeichnis gestalten */
+
+.contents ul {
+    list-style: none; 
+    padding: 0;
+}
+
+.contents li {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6em;
+    margin-bottom: 0.5em;
+}
+
+.contents a {
+    text-decoration: none; 
+    color: #333;
+    font-weight: bold;
+}
+
+.contents a:hover {
+    color: #666;
+}
+
+/* Bindestrich aus <h1>-Element ausblenden, wenn sich die Screensize ändert */
+
+.hide-on-smaller-screens {
+    display: inline;
+}
+
+/* Ich habe mein Layout für 3 Screen-sizes optimiert*/
+/* Full Screen, Half Screen und Smartphone*/
+
+/* Half Screen */
+@media (max-width: 1400px) {
+
+    /* Rückseite CD und Schallplatte werden untereinander angezeigt - ESA4 */
+    .image-row {
+        display: block;
+    }
+    
+    .image-row img {
+        max-width: 100%; 
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    /* Position des Inhaltsverzeichnis anpassen */
+    .contents h2, li {
+        margin-left: 35%;
+    }
+
+    .contents h2 {
+        margin-top: 15%;
+    }
+
+    /* Hauptüberschrift anpassen */
+    #first-line,
+    #second-line {
+      order: initial;
+      display: block;
+    }
+
+    /* Bindestrich verschwinden lassen */
+    .hide-on-smaller-screens {
+        display: none;
+    }
+
+}
+
+/* Smartphone */
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 3.5em;
+    }
+
+    .contents h2, li {
+        margin-left: 10%;
+    }
+
+    h2 {
+        font-size:2em;
+    }
+}
