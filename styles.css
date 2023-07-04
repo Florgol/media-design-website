@@ -1,12 +1,13 @@
 /* Author: Florian Goldbach */ 
 /* Datum: 14.06.2023 */
 
-/* Die Default-Einstellungen sind für das Layout Fullscreen - Media Queries für andere Layouts am Ende! */
+/* Die Default-Einstellungen sind für das Layout "Fullscreen" - Media Queries für andere Layouts am Ende! */
 
 /* Allgemeine Einstellungen - Schriftart, Schriftgöße, Spacing, Position */
 
 body {
-    color: #333; 
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
 }
 
 h1, h2 {
@@ -17,6 +18,7 @@ h1, h2 {
 
 h1 {
     font-size: 5em;
+
 }
 
 h2 {
@@ -26,6 +28,13 @@ h2 {
 
 p {
     padding: 0 50px;
+
+    font-size: 0.9em;
+}
+
+summary {
+    font-size: 0.5;
+    font-style: italic;
 }
 
 /* Links schöner darstellen */
@@ -156,6 +165,12 @@ details[open] {
 
 .contents a:hover {
     color: #666;
+}
+
+/* Letztes Element soll etwas Platz für das Ende der Website lassen */
+
+#last-element {
+    margin-bottom: 20%;
 }
 
 /* Bindestrich aus <h1>-Element ausblenden, wenn sich die Screensize ändert */
