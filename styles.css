@@ -27,8 +27,7 @@ h2 {
 }
 
 p {
-    padding: 0 50px;
-
+    padding: 0 5%;
     font-size: 0.9em;
 }
 
@@ -173,6 +172,12 @@ details[open] {
     margin-bottom: 20%;
 }
 
+/* Letztes Element (ist die Beschreibung von ESA6) positionieren */
+
+#last-element p {
+    padding: 0 25%;
+}
+
 /* Bindestrich aus <h1>-Element ausblenden, wenn sich die Screensize ändert */
 
 .hide-on-smaller-screens {
@@ -217,6 +222,10 @@ details[open] {
         display: none;
     }
 
+    /* Beschreibungen Abstand von Bildschirm ändern */
+    #last-element p {
+        padding: 0 7%;
+    }
 }
 
 /* Smartphone */
@@ -232,5 +241,10 @@ details[open] {
 
     h2 {
         font-size:2em;
+    }
+
+    /* Beschreibungen Abstand von Bildschirm ändern */
+    p {
+        padding: 0 9%;
     }
 }
