@@ -72,6 +72,8 @@ img {
     margin: auto;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #esa1 img, #esa2 img, #esa3 img {
@@ -120,8 +122,29 @@ details[open] {
 
 .image-row {
     display: flex;
-    justify-content: center;
     align-items: center;
+}
+
+.image-row a {
+    display: flex;
+    width: 50%;
+}
+
+.image-row #left-image {
+    justify-content: flex-end;
+}
+
+.image-row #right-image {
+    justify-content: flex-start;
+}
+
+.image-row img {
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: auto;
 }
 
 
@@ -190,13 +213,21 @@ details[open] {
 
     /* Rückseite CD und Schallplatte werden untereinander angezeigt - ESA4 */
     .image-row {
-        display: block;
+        flex-direction: column;
     }
-    
+
+    .image-row a {
+        width: 100%;
+    }
+
+    .image-row #left-image,
+    .image-row #right-image {
+        justify-content: center;
+    }
+
     .image-row img {
-        max-width: 100%; 
-        margin: 0 auto;
-        padding: 0;
+        margin-right: 0;
+        margin-left: 0;
     }
 
     /* Position des Inhaltsverzeichnis anpassen */
