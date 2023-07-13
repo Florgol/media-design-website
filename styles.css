@@ -120,13 +120,11 @@ details[open] {
 
 .image-row {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.image-row img {
-    max-width: 50%;
-    margin: 0;
-    padding: 0;
-}
+
 
  /* Inhaltsverzeichnis positionieren */
 
