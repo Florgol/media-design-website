@@ -5,6 +5,5 @@ Each exercise has a collapsable description.
 The website is viewable in landscape or portrait mode.
 
 The project language is German, meaning all descriptions and accompanying materials are in German.
-The website is built with HTML and CSS.
 
 You can access the website [here](https://florgol.github.io/media-design-website/ "The Media Design Website").
